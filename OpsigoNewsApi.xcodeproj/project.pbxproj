@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C68FBB50348BAAB51A3D684 /* Pods_OpsigoNewsApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BF2D5833A3D0D257C1CAEA /* Pods_OpsigoNewsApi.framework */; };
+		B6263EA625CD53C4009F6263 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6263EA525CD53C4009F6263 /* NewsModel.swift */; };
 		B6EA0B8325CD22AB0087723B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EA0B8225CD22AB0087723B /* AppDelegate.swift */; };
 		B6EA0B8525CD22AB0087723B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EA0B8425CD22AB0087723B /* SceneDelegate.swift */; };
 		B6EA0B8725CD22AB0087723B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EA0B8625CD22AB0087723B /* ViewController.swift */; };
@@ -16,6 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02BF2D5833A3D0D257C1CAEA /* Pods_OpsigoNewsApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpsigoNewsApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0393BD9165CBDAF9E536500B /* Pods-OpsigoNewsApi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpsigoNewsApi.debug.xcconfig"; path = "Target Support Files/Pods-OpsigoNewsApi/Pods-OpsigoNewsApi.debug.xcconfig"; sourceTree = "<group>"; };
+		252CE151DA50014DE0E2BFBA /* Pods-OpsigoNewsApi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpsigoNewsApi.release.xcconfig"; path = "Target Support Files/Pods-OpsigoNewsApi/Pods-OpsigoNewsApi.release.xcconfig"; sourceTree = "<group>"; };
+		B6263EA525CD53C4009F6263 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		B6EA0B7F25CD22AB0087723B /* OpsigoNewsApi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpsigoNewsApi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6EA0B8225CD22AB0087723B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6EA0B8425CD22AB0087723B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C68FBB50348BAAB51A3D684 /* Pods_OpsigoNewsApi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84D317AB172B1F18DA9524F5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0393BD9165CBDAF9E536500B /* Pods-OpsigoNewsApi.debug.xcconfig */,
+				252CE151DA50014DE0E2BFBA /* Pods-OpsigoNewsApi.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B6EA0B7625CD22AB0087723B = {
 			isa = PBXGroup;
 			children = (
 				B6EA0B8125CD22AB0087723B /* OpsigoNewsApi */,
 				B6EA0B8025CD22AB0087723B /* Products */,
+				84D317AB172B1F18DA9524F5 /* Pods */,
+				C06F2D3A5FE9225CE0A009D6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,12 +77,21 @@
 				B6EA0B8225CD22AB0087723B /* AppDelegate.swift */,
 				B6EA0B8425CD22AB0087723B /* SceneDelegate.swift */,
 				B6EA0B8625CD22AB0087723B /* ViewController.swift */,
+				B6263EA525CD53C4009F6263 /* NewsModel.swift */,
 				B6EA0B8825CD22AB0087723B /* Main.storyboard */,
 				B6EA0B8B25CD22AD0087723B /* Assets.xcassets */,
 				B6EA0B8D25CD22AD0087723B /* LaunchScreen.storyboard */,
 				B6EA0B9025CD22AD0087723B /* Info.plist */,
 			);
 			path = OpsigoNewsApi;
+			sourceTree = "<group>";
+		};
+		C06F2D3A5FE9225CE0A009D6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				02BF2D5833A3D0D257C1CAEA /* Pods_OpsigoNewsApi.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B6EA0B9325CD22AD0087723B /* Build configuration list for PBXNativeTarget "OpsigoNewsApi" */;
 			buildPhases = (
+				1C1275120992DE5C85210F05 /* [CP] Check Pods Manifest.lock */,
 				B6EA0B7B25CD22AB0087723B /* Sources */,
 				B6EA0B7C25CD22AB0087723B /* Frameworks */,
 				B6EA0B7D25CD22AB0087723B /* Resources */,
+				69586DD928ED3E16BA6D8BB3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,11 +161,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1C1275120992DE5C85210F05 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OpsigoNewsApi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		69586DD928ED3E16BA6D8BB3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OpsigoNewsApi/Pods-OpsigoNewsApi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OpsigoNewsApi/Pods-OpsigoNewsApi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OpsigoNewsApi/Pods-OpsigoNewsApi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B6EA0B7B25CD22AB0087723B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6263EA625CD53C4009F6263 /* NewsModel.swift in Sources */,
 				B6EA0B8725CD22AB0087723B /* ViewController.swift in Sources */,
 				B6EA0B8325CD22AB0087723B /* AppDelegate.swift in Sources */,
 				B6EA0B8525CD22AB0087723B /* SceneDelegate.swift in Sources */,
@@ -283,6 +355,7 @@
 		};
 		B6EA0B9425CD22AD0087723B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0393BD9165CBDAF9E536500B /* Pods-OpsigoNewsApi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -303,6 +376,7 @@
 		};
 		B6EA0B9525CD22AD0087723B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 252CE151DA50014DE0E2BFBA /* Pods-OpsigoNewsApi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
