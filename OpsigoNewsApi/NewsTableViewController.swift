@@ -8,23 +8,29 @@
 import UIKit
 import Alamofire
 import AlamofireImage
-
 class NewsTableViewController: UITableViewController {
   
   var news = [Articles]()
-  
+
   override func viewDidLoad() {
     super.viewDidLoad()
     
+//    fetchNews()
     navigationController?.hidesBarsOnSwipe = true
 
     tableView.register(UINib(nibName: "NewsTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
-    tableView.estimatedRowHeight = 100
-    tableView.rowHeight = UITableView.automaticDimension
-    fetchNews()
-    //    tableView.tableFooterView = UIView()
+//    tableView.estimatedRowHeight = 100
+//    tableView.rowHeight = UITableView.automaticDimension
     
+    }
+  @IBAction func refresh(_ sender: UIRefreshControl) {
+    fetchNews()
+    
+    sender.endRefreshing()
   }
+  //    tableView.tableFooterView = UIView()
+    
+  
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return news.count
   }
@@ -46,6 +52,7 @@ class NewsTableViewController: UITableViewController {
   }
   
   
+  
   func fetchNews() {
     let request = AF.request("https://newsapi.org/v2/top-headlines?country=id&apiKey=67c81ce67e4d473c86a1df57efd95da2").validate(statusCode: 200...500)
     
@@ -55,10 +62,12 @@ class NewsTableViewController: UITableViewController {
       //
       DispatchQueue.main.async {
         self.tableView.reloadData()
+
         
       }
       
     }
+
     
   }
   
