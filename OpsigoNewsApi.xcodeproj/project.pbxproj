@@ -15,6 +15,8 @@
 		B6EA0B8A25CD22AB0087723B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6EA0B8825CD22AB0087723B /* Main.storyboard */; };
 		B6EA0B8C25CD22AD0087723B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6EA0B8B25CD22AD0087723B /* Assets.xcassets */; };
 		B6EA0B8F25CD22AD0087723B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6EA0B8D25CD22AD0087723B /* LaunchScreen.storyboard */; };
+		B6EADA1725CE0118005A799A /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EADA1525CE0118005A799A /* NewsTableViewCell.swift */; };
+		B6EADA1825CE0118005A799A /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6EADA1625CE0118005A799A /* NewsTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		B6EA0B8B25CD22AD0087723B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6EA0B8E25CD22AD0087723B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6EA0B9025CD22AD0087723B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6EADA1525CE0118005A799A /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		B6EADA1625CE0118005A799A /* NewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,8 @@
 				B6EA0B8425CD22AB0087723B /* SceneDelegate.swift */,
 				B6EA0B8625CD22AB0087723B /* ViewController.swift */,
 				B6263EA525CD53C4009F6263 /* NewsModel.swift */,
+				B6EADA1525CE0118005A799A /* NewsTableViewCell.swift */,
+				B6EADA1625CE0118005A799A /* NewsTableViewCell.xib */,
 				B6EA0B8825CD22AB0087723B /* Main.storyboard */,
 				B6EA0B8B25CD22AD0087723B /* Assets.xcassets */,
 				B6EA0B8D25CD22AD0087723B /* LaunchScreen.storyboard */,
@@ -155,6 +161,7 @@
 			files = (
 				B6EA0B8F25CD22AD0087723B /* LaunchScreen.storyboard in Resources */,
 				B6EA0B8C25CD22AD0087723B /* Assets.xcassets in Resources */,
+				B6EADA1825CE0118005A799A /* NewsTableViewCell.xib in Resources */,
 				B6EA0B8A25CD22AB0087723B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,6 +217,7 @@
 			files = (
 				B6263EA625CD53C4009F6263 /* NewsModel.swift in Sources */,
 				B6EA0B8725CD22AB0087723B /* ViewController.swift in Sources */,
+				B6EADA1725CE0118005A799A /* NewsTableViewCell.swift in Sources */,
 				B6EA0B8325CD22AB0087723B /* AppDelegate.swift in Sources */,
 				B6EA0B8525CD22AB0087723B /* SceneDelegate.swift in Sources */,
 			);
