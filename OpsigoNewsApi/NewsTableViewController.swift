@@ -7,16 +7,19 @@
 
 import UIKit
 import Alamofire
-class ViewController: UITableViewController {
+import AlamofireImage
+class NewsTableViewController: UITableViewController {
   
   var news = [Articles]()
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    tableView.estimatedRowHeight = 500
-    tableView.rowHeight = UITableView.automaticDimension
-    tableView.register(UINib(nibName: "NewsTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
     
+    navigationController?.hidesBarsOnSwipe = true
+
+    tableView.register(UINib(nibName: "NewsTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
+    tableView.estimatedRowHeight = 100
+    tableView.rowHeight = UITableView.automaticDimension
     fetchNews()
     //    tableView.tableFooterView = UIView()
     
@@ -26,12 +29,15 @@ class ViewController: UITableViewController {
   }
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     if let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? NewsTableViewCell {
-    
-    let newNews = news [indexPath.row]
+      
+      let newNews = news [indexPath.row]
       cell.newsTitle.text = newNews.title
       cell.newsDescription.text = newNews.description
+      let url = NSURL.init(string: newNews.urlToImage!)
+      cell.imageNews.af.setImage(withURL: url! as URL)
       
-    return cell
+      
+      return cell
     } else {
       return UITableViewCell()
     }
