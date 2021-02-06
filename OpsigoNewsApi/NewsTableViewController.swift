@@ -8,6 +8,7 @@
 import UIKit
 import Alamofire
 import AlamofireImage
+
 class NewsTableViewController: UITableViewController {
   
   var news = [Articles]()
