@@ -138,15 +138,6 @@
                                                 <color key="textColor" systemColor="systemGrayColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Link" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="rVW-qL-wyV">
-                                                <rect key="frame" x="8" y="218" width="398" height="50"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="aRt-dM-RQW"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQs-IT-xgl">
                                                 <rect key="frame" x="8" y="106" width="398" height="80"/>
                                                 <constraints>
@@ -157,19 +148,28 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Link" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vFQ-pL-thk">
+                                                <rect key="frame" x="4" y="211" width="402" height="70"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="l26-8X-zx7"/>
+                                                </constraints>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="rVW-qL-wyV" firstAttribute="top" secondItem="YKC-Xe-uZi" secondAttribute="bottom" constant="8" id="6Y4-WX-AtC"/>
-                                            <constraint firstAttribute="trailing" secondItem="rVW-qL-wyV" secondAttribute="trailing" constant="8" id="ACX-Bx-KeN"/>
                                             <constraint firstItem="YKC-Xe-uZi" firstAttribute="leading" secondItem="NxI-yg-mD6" secondAttribute="leading" constant="8" id="Dyc-qh-pWr"/>
-                                            <constraint firstAttribute="trailing" secondItem="rVW-qL-wyV" secondAttribute="trailing" constant="8" id="H0P-mg-NH8"/>
                                             <constraint firstItem="dQs-IT-xgl" firstAttribute="top" secondItem="Z79-RS-qF0" secondAttribute="bottom" constant="8" id="JtV-jj-eJ2"/>
                                             <constraint firstAttribute="trailing" secondItem="dQs-IT-xgl" secondAttribute="trailing" constant="8" id="M7f-WA-ShD"/>
                                             <constraint firstAttribute="trailing" secondItem="VvM-QX-oj4" secondAttribute="trailing" constant="8" id="MBt-RQ-1KV"/>
                                             <constraint firstItem="Z79-RS-qF0" firstAttribute="top" secondItem="K5L-nh-V9W" secondAttribute="bottom" constant="8" id="WqS-Bj-gmj"/>
+                                            <constraint firstItem="vFQ-pL-thk" firstAttribute="top" secondItem="YKC-Xe-uZi" secondAttribute="bottom" constant="1" id="Yfm-GX-2JQ"/>
                                             <constraint firstItem="K5L-nh-V9W" firstAttribute="top" secondItem="VvM-QX-oj4" secondAttribute="bottom" constant="8" id="aOR-b4-Rru"/>
+                                            <constraint firstAttribute="trailing" secondItem="vFQ-pL-thk" secondAttribute="trailing" constant="8" id="ati-b3-ec5"/>
                                             <constraint firstItem="VvM-QX-oj4" firstAttribute="top" secondItem="NxI-yg-mD6" secondAttribute="top" constant="8" id="ild-YO-nxs"/>
-                                            <constraint firstItem="rVW-qL-wyV" firstAttribute="leading" secondItem="NxI-yg-mD6" secondAttribute="leading" constant="8" id="jga-ci-Ds7"/>
+                                            <constraint firstItem="vFQ-pL-thk" firstAttribute="leading" secondItem="NxI-yg-mD6" secondAttribute="leading" constant="4" id="kkn-7H-0GQ"/>
                                             <constraint firstItem="dQs-IT-xgl" firstAttribute="leading" secondItem="NxI-yg-mD6" secondAttribute="leading" constant="8" id="n2q-1z-bzY"/>
                                             <constraint firstItem="VvM-QX-oj4" firstAttribute="leading" secondItem="NxI-yg-mD6" secondAttribute="leading" constant="8" id="nUY-Kf-vdH"/>
                                             <constraint firstItem="YKC-Xe-uZi" firstAttribute="top" secondItem="dQs-IT-xgl" secondAttribute="bottom" constant="8" id="oWw-E7-ql3"/>
@@ -195,7 +195,7 @@
                         <outlet property="detailDescription" destination="dQs-IT-xgl" id="Kyg-zX-4Jl"/>
                         <outlet property="detailImage" destination="fD5-Jj-lmx" id="5Wo-8l-oIG"/>
                         <outlet property="detailTitle" destination="VvM-QX-oj4" id="fux-Dj-vRM"/>
-                        <outlet property="link" destination="rVW-qL-wyV" id="2Kb-sB-gpV"/>
+                        <outlet property="links" destination="vFQ-pL-thk" id="e92-Xa-3cT"/>
                         <outlet property="time" destination="5VX-Wf-Vdb" id="BFz-59-cWO"/>
                     </connections>
                 </viewController>
@@ -206,6 +206,9 @@
     </scenes>
     <resources>
         <image name="nophoto" width="600" height="600"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
