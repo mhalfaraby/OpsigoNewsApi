@@ -148,10 +148,9 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQs-IT-xgl">
-                                                <rect key="frame" x="8" y="106" width="374" height="80"/>
+                                                <rect key="frame" x="8" y="106" width="398" height="80"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="3cB-No-12q"/>
-                                                    <constraint firstAttribute="width" constant="374" id="5wD-5C-4xh"/>
                                                 </constraints>
                                                 <string key="text">Jika Anda tidak berniat untuk pindah dari WhatsApp ke Telegram Cs, lakukan 5 tips ini demi menjaga keamanan selama menggunakan WhatsApp.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>

@@ -72,6 +72,7 @@
 			children = (
 				B6EA0B8825CD22AB0087723B /* Main.storyboard */,
 				B6EADA1625CE0118005A799A /* NewsTableViewCell.xib */,
+				B6EA0B8D25CD22AD0087723B /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -113,7 +114,6 @@
 				B6EA0B8225CD22AB0087723B /* AppDelegate.swift */,
 				B6EA0B8425CD22AB0087723B /* SceneDelegate.swift */,
 				B6EA0B8B25CD22AD0087723B /* Assets.xcassets */,
-				B6EA0B8D25CD22AD0087723B /* LaunchScreen.storyboard */,
 				B6EA0B9025CD22AD0087723B /* Info.plist */,
 			);
 			path = OpsigoNewsApi;
