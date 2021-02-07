@@ -38,47 +38,37 @@ class NewsTableViewController: UITableViewController{
     return news.count
   }
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    if let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? NewsTableViewCell {
-      
+  if let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? NewsTableViewCell {
       let newNews = news[indexPath.row]
       cell.newsTitle.text = newNews.title
       cell.newsDescription.text = newNews.description
-      
       if let image = newNews.urlToImage {
-        let urlToImage = NSURL.init(string: image)
-        cell.imageNews.af.setImage(withURL: urlToImage! as URL )
-        
-      } else {
+              let urlToImage = NSURL.init(string: image)
+              cell.imageNews.af.setImage(withURL: urlToImage! as URL)
+      }
+      else {
         cell.imageNews.image = UIImage(named: "nophoto")
       }
-      
       return cell
-    } else {
+    }
+    else {
       return UITableViewCell()
     }
-    
-    
   }
   
   
   //MARK: -  segue to Detail
   override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
     selectedItem = news[indexPath.row]
-    
     performSegue(withIdentifier: "toDetail", sender: self)
-    return indexPath
-  }
+    return indexPath}
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    
     if segue.identifier == "toDetail" {
       let deatailVC = segue.destination as! DetailsNewsViewController
       deatailVC.detailNews = selectedItem
     }
-    
   }
-  
-  
 }
 
 
@@ -87,9 +77,8 @@ class NewsTableViewController: UITableViewController{
 extension NewsTableViewController: NewsManagerDelegate {
   func updateNews(news: NewsModel) {
     self.news = news.articles
-    
     DispatchQueue.main.async {
-      self.tableView.reloadData()
+    self.tableView.reloadData()
     }
   }
   
