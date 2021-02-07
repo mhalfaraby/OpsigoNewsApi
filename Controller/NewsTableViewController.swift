@@ -21,6 +21,7 @@ class NewsTableViewController: UITableViewController{
   override func viewDidLoad() {
     super.viewDidLoad()
     newsManager.delegate = self
+    newsManager.fetchNews()
     tableView.register(UINib(nibName: "NewsTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
   }
   
