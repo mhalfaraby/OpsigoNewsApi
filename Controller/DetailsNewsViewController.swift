@@ -8,7 +8,8 @@
 import UIKit
 import AlamofireImage
 class DetailsNewsViewController: UIViewController {
-
+  
+  //MARK: -  Properties
   
   var detailNews: Articles?
   
@@ -20,27 +21,22 @@ class DetailsNewsViewController: UIViewController {
   @IBOutlet weak var authorName: UILabel!
   @IBOutlet weak var sources: UILabel!
   
+  //MARK: -  viewDidLoad
   override func viewDidLoad() {
-        super.viewDidLoad()
-
+    super.viewDidLoad()
+    
     detailTitle.text = detailNews?.title
     detailDescription.text = detailNews?.description
     time.text = detailNews?.publishedAt
     authorName.text = detailNews?.source.name
     link.text = detailNews?.url
-
+    
     if let image = detailNews?.urlToImage {
       let urlToImage = NSURL.init(string: image)
       detailImage.af.setImage(withURL: urlToImage! as URL )
-      
-    } else {
+    }
+    else {
       detailImage.image = UIImage(named: "nophoto")
     }
-
-    }
-  
-  
-    
-
-
+  }
 }

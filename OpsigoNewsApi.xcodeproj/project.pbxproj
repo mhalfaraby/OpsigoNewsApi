@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B6263EA625CD53C4009F6263 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6263EA525CD53C4009F6263 /* NewsModel.swift */; };
 		B652F25425CFEA9C00FD9DE0 /* Pods_OpsigoNewsApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BF2D5833A3D0D257C1CAEA /* Pods_OpsigoNewsApi.framework */; };
+		B6DC2F2925D00E1F0047413C /* NewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DC2F2825D00E1E0047413C /* NewsManager.swift */; };
 		B6EA0B8325CD22AB0087723B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EA0B8225CD22AB0087723B /* AppDelegate.swift */; };
 		B6EA0B8525CD22AB0087723B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EA0B8425CD22AB0087723B /* SceneDelegate.swift */; };
 		B6EA0B8725CD22AB0087723B /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EA0B8625CD22AB0087723B /* NewsTableViewController.swift */; };
@@ -25,6 +26,7 @@
 		0393BD9165CBDAF9E536500B /* Pods-OpsigoNewsApi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpsigoNewsApi.debug.xcconfig"; path = "Target Support Files/Pods-OpsigoNewsApi/Pods-OpsigoNewsApi.debug.xcconfig"; sourceTree = "<group>"; };
 		252CE151DA50014DE0E2BFBA /* Pods-OpsigoNewsApi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpsigoNewsApi.release.xcconfig"; path = "Target Support Files/Pods-OpsigoNewsApi/Pods-OpsigoNewsApi.release.xcconfig"; sourceTree = "<group>"; };
 		B6263EA525CD53C4009F6263 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		B6DC2F2825D00E1E0047413C /* NewsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsManager.swift; sourceTree = "<group>"; };
 		B6EA0B7F25CD22AB0087723B /* OpsigoNewsApi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpsigoNewsApi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6EA0B8225CD22AB0087723B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6EA0B8425CD22AB0087723B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				B6263EA525CD53C4009F6263 /* NewsModel.swift */,
+				B6DC2F2825D00E1E0047413C /* NewsManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				B6EADA1725CE0118005A799A /* NewsTableViewCell.swift in Sources */,
 				B6EA0B8325CD22AB0087723B /* AppDelegate.swift in Sources */,
 				B6EADA1E25CE447F005A799A /* DetailsNewsViewController.swift in Sources */,
+				B6DC2F2925D00E1F0047413C /* NewsManager.swift in Sources */,
 				B6EA0B8525CD22AB0087723B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

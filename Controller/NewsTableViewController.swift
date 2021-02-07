@@ -10,23 +10,29 @@ import Alamofire
 import AlamofireImage
 class NewsTableViewController: UITableViewController{
   
+  
+  //MARK: -  Properties
   var news: [Articles] = []
   var selectedItem: Articles?
+  var newsManager = NewsManager()
   
+  
+  //MARK: -  viewDidLoad
   override func viewDidLoad() {
     super.viewDidLoad()
-
-    fetchNews()
-    
+    newsManager.delegate = self
     tableView.register(UINib(nibName: "NewsTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
-
-    
   }
+  
+  
+  //MARK: -  Pull to refresh
   @IBAction func refresh(_ sender: UIRefreshControl) {
-    fetchNews()
-    
+    newsManager.fetchNews()
     sender.endRefreshing()
   }
+  
+  
+  //MARK: -  TableView data source and delegate
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return news.count
   }
@@ -52,40 +58,40 @@ class NewsTableViewController: UITableViewController{
     
     
   }
+  
+  
+  //MARK: -  segue to Detail
   override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
     selectedItem = news[indexPath.row]
     
     performSegue(withIdentifier: "toDetail", sender: self)
     return indexPath
   }
-
+  
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
     if segue.identifier == "toDetail" {
-         let deatailVC = segue.destination as! DetailsNewsViewController
-         deatailVC.detailNews = selectedItem
-  }
-  
-  }
-  func fetchNews() {
-    let request = AF.request("https://newsapi.org/v2/top-headlines?country=id&apiKey=67c81ce67e4d473c86a1df57efd95da2").validate(statusCode: 200...500)
-    
-    request.responseDecodable(of: NewsModel.self) { (response) in
-      guard let result = response.value else { return }
-      self.news = result.articles
-      
-      
-      //
-      DispatchQueue.main.async {
-        self.tableView.reloadData()
-        
-        
-      }
-      
+      let deatailVC = segue.destination as! DetailsNewsViewController
+      deatailVC.detailNews = selectedItem
     }
     
-    
   }
+  
+  
+}
+
+
+//MARK: -  extension NewsManagerDelegate
+
+extension NewsTableViewController: NewsManagerDelegate {
+  func updateNews(news: NewsModel) {
+    self.news = news.articles
+    
+    DispatchQueue.main.async {
+      self.tableView.reloadData()
+    }
+  }
+  
   
 }
 
